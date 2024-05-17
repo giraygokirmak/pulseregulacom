@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            width: 90%;
+            margin: 0 auto;
+        }
+        header {
+            margin-top: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #b5b5b5;
+        }
+        .logo-row {
+            width: auto; /* Let the image determine the width */
+            margin: 0 auto;
+        }
+        .logo {
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function() {
+            const logoImage = document.querySelector('.logo img');
+            logoImage.addEventListener('load', function() {
+                const naturalWidth = logoImage.naturalWidth;
+                const naturalHeight = logoImage.naturalHeight;
+                const logoContainer = document.querySelector('.logo');
+                logoContainer.style.width = naturalWidth + 'px';
+                logoContainer.style.height = naturalHeight + 'px';
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="row">
+            <div class="logo-row">
+                <div class="logo">
+                    <img src="PulseRegula.svg" alt="PulseRegula Regulatory Affairs and Quality Assurance Consulting">
+                </div>
+            </div>
+        </div>
+    </header>
+    <h1 style="text-align: center;">PulseRegula Regulatory Affairs and Quality Assurance Consulting</h1>
+</body>
+</html>
